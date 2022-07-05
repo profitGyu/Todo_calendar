@@ -1,6 +1,13 @@
 @use '/src/styles/constants/colors';
 
-.header {
-  padding: 0 20px;
-  background: colors.$DARK;
+.layout {
+  width: 100vw;
+  height: 100vh;
+
+  .main {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: colors.$BLACK_BACKGROUND;
+  }
 }

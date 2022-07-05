@@ -1,0 +1,57 @@
+@use '/src/styles/constants/colors';
+
+.calendarTable {
+  width: 100%;
+  font-size: 1em;
+  color: colors.$TEXT_WHITE;
+  background-color: colors.$BLACK_BACKGROUND;
+
+  caption {
+    .calendarCaptionWrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      font-size: 2em;
+      background-color: colors.$BLACK_BACKGROUND;
+
+      button {
+        width: 50px;
+        height: 50px;
+        color: colors.$TEXT_WHITE;
+        background-color: colors.$SUB_BACKGROUND;
+        border-radius: 50px;
+      }
+    }
+  }
+
+  .calendarThead {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    padding: 10px 20px;
+    background-color: colors.$SUB_BACKGROUND;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    justify-items: center;
+    padding: 20px;
+    text-align: center;
+
+    .noCurrent {
+      opacity: 0.8;
+    }
+
+    td {
+      width: auto;
+      height: 60px;
+    }
+
+    td:nth-of-type(7n + 1) {
+      color: colors.$DANGER;
+    }
+  }
+}

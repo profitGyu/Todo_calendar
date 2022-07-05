@@ -1,5 +1,5 @@
 {
-  "name": "vp_test",
+  "name": "todo-calendar",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -27,7 +27,6 @@
     ]
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.8.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
