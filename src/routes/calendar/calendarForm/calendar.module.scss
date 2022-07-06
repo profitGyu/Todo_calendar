@@ -37,21 +37,46 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-gap: 5px;
-    justify-items: center;
+    justify-items: start;
     padding: 20px;
-    text-align: center;
 
     .noCurrent {
-      opacity: 0.8;
+      opacity: 0.5;
     }
 
-    td {
-      width: auto;
-      height: 60px;
+    .item {
+      width: 100%;
+      height: 80px;
+
+      button {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        font-size: 1em;
+        color: colors.$TEXT_WHITE;
+
+        .itemContainer {
+          display: flex;
+        }
+      }
+
+      .today {
+        padding-bottom: 5px;
+        background: colors.$PRIMARY;
+        border-radius: 10px;
+      }
+
+      button:focus {
+        border: 3px solid colors.$SUB_BACKGROUND;
+        transform: scale(1.2);
+      }
     }
 
-    td:nth-of-type(7n + 1) {
-      color: colors.$DANGER;
+    .item:nth-of-type(7n + 1) {
+      button {
+        color: colors.$DANGER;
+      }
     }
   }
 }

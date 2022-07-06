@@ -1,7 +1,8 @@
 import styles from './calendar.module.scss'
-import dayjs from 'dayjs'
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import CalendarItem from './calendarItem'
+import { useRecoilState } from 'recoil'
+import selectDateState from '../state'
 
 const DAY = [
   {
@@ -35,7 +36,7 @@ const DAY = [
 ]
 
 const CalenderForm = () => {
-  const [selectDate, setSelectDate] = useState(dayjs())
+  const [selectDate, setSelectDate] = useRecoilState(selectDateState)
 
   const prevDay = useMemo(() => selectDate.subtract(1, 'month').endOf('month').get('day') + 1, [selectDate])
   const preLastDate = useMemo(() => Number(selectDate.subtract(1, 'month').endOf('month').format('DD')), [selectDate])
@@ -74,18 +75,16 @@ const CalenderForm = () => {
         <tr className={styles.grid}>
           {new Array(prevDay % 7 === 0 ? 0 : prevDay).fill(0).map((_, i) => {
             const preKey = `pre-day-${i}`
-            return <CalendarItem num={preLastDate - prevDay + i + 1} key={preKey} NoCurrent={false} />
+            return <CalendarItem num={preLastDate - prevDay + i + 1} key={preKey} noCurrent />
           })}
           {new Array(lastDate).fill(0).map((_, i) => {
             const CurrentKey = `current-day-${i}`
-            return <CalendarItem num={i + 1} key={CurrentKey} NoCurrent={false} />
+            return <CalendarItem num={i + 1} key={CurrentKey} />
           })}
-          {new Array(7 - lastDay).fill(0).map((_, i) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <td key={`next-day-${i}`} className={styles.noCurrent}>
-              {i + 1}
-            </td>
-          ))}
+          {new Array(7 - lastDay).fill(0).map((_, i) => {
+            const preKey = `next-day-${i}`
+            return <CalendarItem key={preKey} num={i + 1} noCurrent />
+          })}
         </tr>
       </tbody>
     </table>
