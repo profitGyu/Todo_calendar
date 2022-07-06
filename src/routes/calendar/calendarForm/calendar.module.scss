@@ -68,7 +68,8 @@
       }
 
       button:focus {
-        border: 3px solid colors.$SUB_BACKGROUND;
+        border: 2px solid colors.$PRIMARY;
+        border-radius: 3px;
         transform: scale(1.2);
       }
     }
