@@ -1,1 +1,6 @@
 export { ReactComponent as Exclamation } from './exclamationIcon.svg'
+export { ReactComponent as LoginIcon } from './login.svg'
+export { ReactComponent as LogoutIcon } from './logout.svg'
+export { ReactComponent as CalendarIcon } from './calendar.svg'
+export { ReactComponent as TodoIcon } from './todo.svg'
+export { ReactComponent as DashboardIcon } from './dashboard.svg'

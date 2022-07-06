@@ -105,6 +105,9 @@ nav,
 section {
   display: block;
 }
+a {
+  all: unset;
+}
 
 body {
   line-height: 1;
