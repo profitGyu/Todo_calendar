@@ -1,0 +1,36 @@
+@use 'src/styles/constants/colors';
+
+.darkModeToggleBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 30px;
+  color: var(--text);
+  background-color: gray;
+  border: 3px solid gray;
+  border-radius: 15px;
+
+  .under {
+    width: 50%;
+    height: 99%;
+    text-align: center;
+    transition: 0.2s ease-out;
+  }
+
+  .toggleButton {
+    position: absolute;
+    width: 50%;
+    height: 99%;
+    font-weight: 700;
+    background: colors.$WHITE_BACKGROUND;
+    border-radius: 25px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .light {
+    left: 50%;
+    transition: 0.2s ease-in-out;
+    background: colors.$BLACK_BACKGROUND;
+  }
+}

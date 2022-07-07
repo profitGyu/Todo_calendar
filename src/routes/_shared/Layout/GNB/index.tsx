@@ -1,7 +1,11 @@
 import styles from './gnb.module.scss'
+import { cx } from 'styles'
 
 import { NavLink } from 'react-router-dom'
 import { CalendarIcon, LoginIcon, TodoIcon, DashboardIcon } from 'assets/icons'
+import { useState } from 'react'
+import ToggleBtn from 'components/Toggle/toggleBtn'
+import useChangeTheme from 'hooks/useChangeTheme'
 
 const GNB_LIST = [
   {
@@ -22,9 +26,7 @@ const GNB_LIST = [
   },
 ]
 const GNB = () => {
-  const changeTest = () => {
-    document.documentElement.setAttribute('background-theme', 'light')
-  }
+  const { themeChange } = useChangeTheme()
 
   return (
     <div className={styles.gnbContainer}>
@@ -35,9 +37,7 @@ const GNB = () => {
           </li>
         ))}
         <li>
-          <button type='button' onClick={changeTest}>
-            토글
-          </button>
+          <ToggleBtn onClick={themeChange} />
         </li>
       </ul>
     </div>

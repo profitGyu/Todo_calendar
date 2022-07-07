@@ -20,6 +20,16 @@
   }
 }
 
+:root[background-theme='dark'] {
+  --color-background: #1d2532;
+  --color-sub-background: #2d343f;
+  --primary: #8163f6;
+  --text: #f9fdff;
+  --text-second: #7d8796;
+  --danger: #b6434b;
+  --success: #8c9f61;
+}
+
 :root[background-theme='light'] {
   --color-background: #fffcee;
   --color-sub-background: #f2f4f5;
@@ -33,5 +43,5 @@
 body {
   color: var(--text);
   background-color: var(--color-background);
-  transition: 0.2s ease-in 0.2s;
+  transition: 0.2s;
 }
