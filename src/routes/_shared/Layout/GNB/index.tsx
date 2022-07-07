@@ -22,6 +22,10 @@ const GNB_LIST = [
   },
 ]
 const GNB = () => {
+  const changeTest = () => {
+    document.documentElement.setAttribute('background-theme', 'light')
+  }
+
   return (
     <div className={styles.gnbContainer}>
       <ul>
@@ -30,7 +34,11 @@ const GNB = () => {
             <NavLink to='/'>{item.src}</NavLink>
           </li>
         ))}
-        <li>쿠쿠</li>
+        <li>
+          <button type='button' onClick={changeTest}>
+            토글
+          </button>
+        </li>
       </ul>
     </div>
   )

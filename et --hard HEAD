@@ -1,0 +1,35 @@
+[33mcommit 280fe94dc3480f12b84f7735c84cea55e804e240[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: silent10z <dkgueing@gmail.com>
+Date:   Thu Jul 7 11:34:41 2022 +0900
+
+    다크모드 초기 설정
+
+[33mcommit 0a00fc1473ceead3639c2689dca99a366c280c94[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: silent10z <dkgueing@gmail.com>
+Date:   Thu Jul 7 01:15:31 2022 +0900
+
+    feat: GNB 추가
+
+[33mcommit a6ad7a62a954cfa9474cc2c8fee3f07342b35f4a[m
+Author: silent10z <dkgueing@gmail.com>
+Date:   Thu Jul 7 00:22:20 2022 +0900
+
+    feat: todo router 설정
+
+[33mcommit 22aab726cd1217fa2e6ee6aefda3b18ab38f85f4[m
+Author: silent10z <dkgueing@gmail.com>
+Date:   Wed Jul 6 21:10:55 2022 +0900
+
+    feat: 켈린더 css 적용
+
+[33mcommit e9dbdbb07bcfe3bc6f85aae49cafa33f2b3c1058[m
+Author: silent10z <dkgueing@gmail.com>
+Date:   Tue Jul 5 22:19:18 2022 +0900
+
+    feat: 켈린더 css 추가및 컴포넌트 분리
+
+[33mcommit 979f02d07151cb7d56b7cf77fc632f4a2e119f76[m
+Author: silent10z <dkgueing@gmail.com>
+Date:   Mon Jul 4 22:07:06 2022 +0900
+
+    feat:린터 및 초기 설정 및 켈린더 기초 코드 적용

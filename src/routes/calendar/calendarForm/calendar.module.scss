@@ -3,8 +3,6 @@
 .calendarTable {
   width: 100%;
   font-size: 1em;
-  color: colors.$TEXT_WHITE;
-  background-color: colors.$BLACK_BACKGROUND;
 
   caption {
     .calendarCaptionWrap {
@@ -13,13 +11,12 @@
       justify-content: space-between;
       padding: 20px;
       font-size: 2em;
-      background-color: colors.$BLACK_BACKGROUND;
 
       button {
         width: 50px;
         height: 50px;
-        color: colors.$TEXT_WHITE;
-        background-color: colors.$SUB_BACKGROUND;
+        color: var(--text);
+        background-color: var(--color-sub-background);
         border-radius: 50px;
       }
     }
@@ -30,7 +27,7 @@
     grid-template-columns: repeat(7, 1fr);
     justify-items: center;
     padding: 10px 20px;
-    background-color: colors.$SUB_BACKGROUND;
+    background-color: var(--color-sub-background);
   }
 
   .grid {
@@ -54,7 +51,7 @@
         width: 100%;
         height: 100%;
         font-size: 1em;
-        color: colors.$TEXT_WHITE;
+        color: var(--text);
 
         .itemContainer {
           display: flex;
@@ -63,12 +60,12 @@
 
       .today {
         padding-bottom: 5px;
-        background: colors.$PRIMARY;
+        background: var(--primary);
         border-radius: 10px;
       }
 
       button:focus {
-        border: 2px solid colors.$PRIMARY;
+        border: 2px solid var(--primary);
         border-radius: 3px;
         transform: scale(1.2);
       }
@@ -76,7 +73,7 @@
 
     .item:nth-of-type(7n + 1) {
       button {
-        color: colors.$DANGER;
+        color: var(--danger);
       }
     }
   }
